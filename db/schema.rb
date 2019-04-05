@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20190405161240) do
 
   create_table "snacks", force: :cascade do |t|
     t.string "name"
-    t.money "price", scale: 2
+    t.float "price"
     t.bigint "machine_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

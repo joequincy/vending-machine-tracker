@@ -1,6 +1,6 @@
 <h1><%= @machine.location %> Vending Machine</h1>
 <ul><% @machine.snacks.each do |snack| %>
   <li><%= snack.name %>:
-  $<%= snack.price %></li>
+  $<%= float_to_dollars(snack.price) %></li>
 <% end %></ul>
-<span>Average Price: $<%= @machine.average_price %>
+<span>Average Price: $<%= float_to_dollars(@machine.average_price) %>

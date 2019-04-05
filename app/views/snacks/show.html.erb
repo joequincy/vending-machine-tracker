@@ -1,1 +1,4 @@
 <span><%= @snack.name %>: $<%= float_to_dollars(@snack.price) %></span>
+<ul><% @snack.machines.each do |machine| %>
+  <li><%= machine.location %>
+<% end %></ul>

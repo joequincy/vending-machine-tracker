@@ -10,12 +10,18 @@ RSpec.describe 'When a user visits a snack show page', type: :feature do
 
   scenario 'they see the name of the snack' do
     visit snack_path(@snack_1)
-    
     expect(page).to have_content(@snack_1.name)
+
+    visit snack_path(@snack_2)
+    expect(page).to have_content(@snack_2.name)
   end
 
-  xscenario 'they see the price of the snack' do
-    #
+  scenario 'they see the price of the snack' do
+    visit snack_path(@snack_1)
+    expect(page).to have_content(@snack_1.price)
+
+    visit snack_path(@snack_2)
+    expect(page).to have_content(@snack_2.price)
   end
 
   xscenario 'they see a list of locations which have the snack' do

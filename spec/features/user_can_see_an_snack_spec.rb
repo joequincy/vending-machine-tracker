@@ -51,8 +51,8 @@ RSpec.describe 'When a user visits a snack show page', type: :feature do
     visit snack_path(@snack_1)
 
     within '#locations' do
-      [@loc1, @loc2, @loc4].each do |location|
-        expect(page).to have_content(location.name)
+      [@loc1, @loc2, @loc4].each do |machine|
+        expect(page).to have_content(machine.location)
       end
     end
   end
